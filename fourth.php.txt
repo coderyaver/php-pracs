@@ -1,0 +1,24 @@
+<?php
+
+$a= array(8, 5, 9, 0, 1, 4);
+$index=0;
+$temp=0;
+for($i=0;$i<5;$i++)
+{
+ $index=$i;
+ for($j=$i+1;$j<6;$j++)
+ {
+   if($a[$j]<$a[$index])
+   $index=$j;
+ }
+ $temp=$a[$i];
+ $a[$i]=$a[$index];
+ $a[$index]=$temp;
+}
+
+for($k=0;$k<6;$k++)
+{
+  echo $a[$i];
+}
+
+?>

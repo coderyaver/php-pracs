@@ -1,0 +1,9 @@
+<?php
+
+$str="hello";
+
+if(ctype_lower($str))
+echo "yes the string is in lower case";
+else echo "no it is not in lower case";
+
+?>
