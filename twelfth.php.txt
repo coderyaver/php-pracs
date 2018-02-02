@@ -1,0 +1,37 @@
+<?php
+
+$cd=array(29,1,2018);
+$bd=array(2,9,2018);
+$days=array(31,28,31,30,31,30,31,31,30,31,30,31);
+$year=$cd[2];
+$month=$cd[1];
+$d=0;
+
+
+while($year<=$bd[2])
+  {
+    
+      if($month==$bd[1])
+      {
+        $d=$d+$bd[0];
+        break;
+      }
+      else
+      {
+        if($month==$cd[1])
+        {
+          $d=$d+($days[$month-1]-$cd[0]);
+        }
+        else
+            $d=$d+$days[$months-1];
+        $month++;
+        if($month>12)
+         {$month=1;
+          $year++;}
+        if($month==$bd[1]&&$year==$bd[2])
+                 break;
+    }
+
+    echo "Number of days to countdown till bday are ";
+    echo $d;
+?>
